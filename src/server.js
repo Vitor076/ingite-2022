@@ -1,3 +1,7 @@
-const app = require('./');
+import http from "node:http";
 
-app.listen(3333);
+const serve = http.createServer((req, res) => {
+  return res.end("teste");
+});
+
+serve.listen(3333);
